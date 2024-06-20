@@ -1,0 +1,22 @@
+#inicialização do servidor utilizando o uvicorn:
+
+uvicorn workout_api.main:app --reload
+
+#inicializando o Alembic - logo após a instalação é necessário executar o comando para que seja
+criada a estrutura do Alembic dentro do nosso projeto:
+
+alembic init alembic
+
+#inicializando o docker compose:
+
+docker-compose up -d
+
+#parando aplicação postgresql que está rodando local no ubuntu
+
+sudo service postgresql stop
+
+#acessar via navegador o pgadmin4 que já está instalado no ubuntu
+
+http://localhost:8080/pgadmin4
+email s*****e@g*********
+password g*********

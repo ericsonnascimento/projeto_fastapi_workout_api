@@ -1,0 +1,13 @@
+# subir com o comando "docker-compose up -d" o -d indica a não visualização dos logs em tempo real
+# caso tenha postgresql rodando, rode o comando "sudo service postgresql stop" e execute o docker-compose novamente
+
+version: "3"
+services:
+  db:
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports: 
+      - "5432:5432"
