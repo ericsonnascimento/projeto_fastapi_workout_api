@@ -2,6 +2,12 @@
 
 uvicorn workout_api.main:app --reload
 
+#inicialização do servidor utilizando o Makefile:
+
+make run
+
+#pagina a ser acessada da API: http://127.0.0.1:8000/docs
+
 #inicializando o Alembic - logo após a instalação é necessário executar o comando para que seja
 criada a estrutura do Alembic dentro do nosso projeto:
 
@@ -20,3 +26,11 @@ sudo service postgresql stop
 http://localhost:8080/pgadmin4
 email s*****e@g*********
 password g*********
+
+#Tecnologias utilizadas:
+FastAPI
+Uvicorn
+Asyncpg
+Alembic
+Python-dotenv
+SQLAlchemy

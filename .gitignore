@@ -131,7 +131,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-env.py
 
 # Spyder project settings
 .spyderproject
@@ -173,8 +172,5 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
-
-#Alembic
-alembic.ini
 
 # End of https://www.toptal.com/developers/gitignore/api/python

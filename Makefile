@@ -1,2 +1,4 @@
+.PHONY: run
+
 run:
-    @uvicorn workout_api.main:app --reload
+	@uvicorn workout_api.main:app --reload
