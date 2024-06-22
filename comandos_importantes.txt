@@ -1,31 +1,48 @@
+#START SERVER VIA UVICORN ------------------------------------->
 #inicialização do servidor utilizando o uvicorn:
 
 uvicorn workout_api.main:app --reload
 
-#inicialização do servidor utilizando o Makefile:
-
-make run
-
+#ACESSO AO FASTAPI --------------------------------------------->
 #pagina a ser acessada da API: http://127.0.0.1:8000/docs
 
+
+#COMANDOS ALEMBIC ----------------------------------------------->
 #inicializando o Alembic - logo após a instalação é necessário executar o comando para que seja
 criada a estrutura do Alembic dentro do nosso projeto:
 
 alembic init alembic
 
+#COMANDOS DOCKER ------------------------------------------------>
 #inicializando o docker compose:
 
 docker-compose up -d
 
-#parando aplicação postgresql que está rodando local no ubuntu
+#COMANDO MAKER -------------------------------------------------->
+#inicialização do servidor utilizando o Makefile:
 
-sudo service postgresql stop
+make run
 
+#o comando criado no maker para criação de migração, a letra "d" habilita a colocação de um título para a migração
+#é criando dentro de alembic/versions um pacote de instruções para criação das tabelas
+
+make create-migrations d="init_db"
+
+#agora vamos criar as tabelas dentro do postgresql com o comando abaixo:
+
+make run-migrations
+
+#ACESSO AO PGADMIN4 ---------------------------------------------->
 #acessar via navegador o pgadmin4 que já está instalado no ubuntu
 
 http://localhost:8080/pgadmin4
 email s*****e@g*********
 password g*********
+
+#OUTRAS INFORMAÇÕES ---------------------------------------------->
+#parando aplicação postgresql que está rodando local no ubuntu
+
+sudo service postgresql stop
 
 #Tecnologias utilizadas:
 FastAPI
