@@ -51,3 +51,6 @@ Asyncpg
 Alembic
 Python-dotenv
 SQLAlchemy
+Pydantic
+
+corrigido problema de importação circular criando __init__.py na pasta contrib importando os models de Categoria, CentroTreinamento e Atleta
