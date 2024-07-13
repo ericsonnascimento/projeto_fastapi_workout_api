@@ -26,7 +26,7 @@ async def post(
 
     return centro_treinamento_out
 
-#Consultando dados na Categoria utilizando GET
+#Consultando todos os dados na Categoria utilizando GET
 @router.get(
     '/',
     summary='Consultar todas os Centros de teinamento',

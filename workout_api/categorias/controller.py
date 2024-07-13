@@ -26,7 +26,7 @@ async def post(
 
     return categoria_out
 
-#Consultando dados na Categoria utilizando GET
+#Consultando todos os dados na Categoria utilizando GET
 @router.get(
     '/',
     summary='Consultar todas as Categorias',
